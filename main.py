@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import date
 
 # 웹 페이지 설정
-st.set_page_config(page_title="퇴직금 계산기", icon="💰")
+st.set_page_config(page_title="퇴직금 계산기", page_icon="💰")
 
 st.title("⚖️ 퇴직금 계산기 (웹 버전)")
 st.info("입사일과 퇴사일, 최근 3개월 급여를 입력하면 법정 퇴직금을 계산합니다.")
@@ -36,4 +36,5 @@ if st.button("계산하기"):
     st.divider()
     st.success(f"### 예상 퇴직금: **{severance_pay:,.0f}원**")
     st.write(f"📍 총 재직일수: {working_days}일")
+
     st.caption("※ 본 계산은 참고용이며, 정확한 금액은 규정에 따라 차이가 있을 수 있습니다.")
